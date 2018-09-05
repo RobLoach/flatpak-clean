@@ -13,7 +13,7 @@
 APPS=$(flatpak list --user)
 if [ -n "${APPS}" ]; then
 	for i in $APPS ; do
-		flatpak uninstall --user --force-remove $i || true
+		flatpak uninstall --user -y --force-remove $i || true
 	done
 fi
 
@@ -21,7 +21,7 @@ fi
 APPS=$(flatpak list --system)
 if [ -n "${APPS}" ]; then
 	for i in $APPS; do
-		flatpak uninstall --system --force-remove $i || true
+		flatpak uninstall --system -y --force-remove $i || true
 	done
 fi
 
