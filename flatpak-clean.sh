@@ -25,5 +25,21 @@ if [ -n "${APPS}" ]; then
 	done
 fi
 
+# Remove all user remotes.
+REMOTES=$(flatpak remotes --user)
+if [ -n "${REMOTES}" ]; then
+	for i in $REMOTES; do
+		flatpak remote-delete --user --force $i || true
+	done
+fi
+
+# Remove all system remotes.
+REMOTES=$(flatpak remotes --system)
+if [ -n "${REMOTES}" ]; then
+	for i in $REMOTES; do
+		flatpak remote-delete --system --force $i || true
+	done
+fi
+
 # Remove the Flatpak app configurations.
 rm -rf ~/.var/app
