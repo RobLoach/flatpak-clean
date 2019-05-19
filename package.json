@@ -1,0 +1,8 @@
+{
+  "name": "flatpak-clean",
+  "version": "v1.0.0",
+  "description": "Flatpak Clean",
+  "scripts": [
+  	"flatpak-clean"
+  ]
+}

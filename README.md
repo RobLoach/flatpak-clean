@@ -7,14 +7,14 @@ WARNING: USE AT OWN RISK
 ## Install
 
 ```
-wget https://raw.githubusercontent.com/RobLoach/flatpak-clean/master/flatpak-clean.sh
-chmod +x flatpak-clean.sh
+wget https://raw.githubusercontent.com/RobLoach/flatpak-clean/master/flatpak-clean
+chmod +x flatpak-clean
 ```
 
 ## Usage
 
 ```
-./flatpak-clean.sh
+./flatpak-clean
 ```
 
 ## License
